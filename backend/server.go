@@ -20,6 +20,7 @@ type User struct {
   ID string `json:"id,omitempty"`
   Name string `json:"name,omitempty"`
   Password string `json:"password,omitempty"`
+  Email string `json:"email,omitempty"`
 }
 
 type Users []User
@@ -61,10 +62,16 @@ func someFunc(w http.ResponseWriter, r *http.Request) {
 func getUsers(w http.ResponseWriter, r *http.Request){
 
   users := Users{
-    User{ID : "hola",
-      Name: "ANAL",
-       Password: "a"},
-    User{Name: "CHAQUETERO"},
+    User{ID : "1",
+      Name: "Alan",
+       Password: "vaselina",
+       Email: "alan@ganso.com",
+     },
+    User{ID: "2",
+        Name: "Monica",
+        Password: "starwars",
+        Email: "monica@udlap.mx",
+    },
 }
 
 json.NewEncoder(w).Encode(users)
