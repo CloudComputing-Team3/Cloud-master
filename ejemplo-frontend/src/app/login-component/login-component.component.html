@@ -1,5 +1,28 @@
-<p>
-  login-component works!
-</p>
+
+<div class="card card-custom" style="    width: 306px;
+    height: 300px; ">
+
+
+  <div class="card-body">
+    <h2 class="card-title">Login user</h2>
+    <form>
+      <label>
+        Email
+      <input placeholder="email" type="email" id="email">
+
+    </label>
+    <label>
+      Password
+      <input placeholder="password" type="password" id="password">
+
+    </label>
+    </form>
+  <button (click)="onClickMe()">Enter</button>
+  </div>
+</div>
+
+<div class="login-background"> </div>
+
+
 
 <router-outlet></router-outlet>
