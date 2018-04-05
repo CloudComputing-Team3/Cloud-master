@@ -37,13 +37,18 @@ label {
   margin-bottom: 19%;
 }
 
-h2 {
+h1 {
   text-align: center;
   margin-bottom: 5%;
+  color: #45959c;
 }
 
 button {
   width: 200px;
-  background: #1e1e67;
+  background: #45959c;
   color: white;
+}
+
+label{
+  color: #45959c;
 }

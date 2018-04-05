@@ -30,7 +30,7 @@ export class LoginComponentComponent implements OnInit {
                 .map((res: Response) => res.json())
                  .subscribe(users => {
                         this.users = users;
-                  //      console.log("Users", this.users);
+                        console.log("Users", this.users);
                 });
   }
 
@@ -38,7 +38,7 @@ export class LoginComponentComponent implements OnInit {
   onClickMe() {
 
     for(var i = 0; i < this.users.length; i++) {
-      if(this.users[i].email == email.value && this.users[i].password == password.value) {
+      if(this.users[i].email == this.email && this.users[i].password == this.password) {
         console.log("email", this.users[i].email, "password", this.users[i].password)
         console.log("router", this.router)
          this.router.navigate(["/dashboard"]);
@@ -48,7 +48,7 @@ export class LoginComponentComponent implements OnInit {
       }
     }
     console.log("users", this.users)
-     console.log("login", email.value)
+     console.log("login", this.email)
    }
 
 
